@@ -13,21 +13,7 @@ dotenv.config();
 
 
 
-const allowedOrigins = [
-  "https://mychatapp-o5n2.vercel.app/login",  
-  "http://localhost:3001"                
-];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true  
-}));
 
 
 
