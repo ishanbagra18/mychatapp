@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://mychatapp-t4g4.vercel.app/login",
+    origin: "mychatapp-nine.vercel.app",
     methods: ["GET", "POST"],
   },
 });
