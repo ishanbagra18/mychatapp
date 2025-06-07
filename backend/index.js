@@ -38,17 +38,7 @@ app.use('/api/chatbot', chatbotRoute);
 
 //
 
-if(process.env.NODE_ENV === 'production')
-{
-  const dirPath = path.resolve();
-  app.use(express.static("./Frontend/dist"));
 
-  app.get('*' , (req , res) =>
-  {
-    res.sendFile(path.resolve(dirPath , '/Frontend/dist' , '/index.html'));
-
-  })
-}
 
 
 
