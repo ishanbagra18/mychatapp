@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser";
 import userRoute from "./routes/user.route.js";
 import messageRoute from "./routes/message.route.js";
 import { app, server } from "./SocketIO/server.js";
-import chatbotRoute from './routes/Chatbot.route.js';
+import chatbotRoute from './routes/chatbot.route.js';
 import path from 'path';
 
 dotenv.config();

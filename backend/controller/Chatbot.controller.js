@@ -7,9 +7,9 @@ export const chatWithBot = async (req, res) => {
         return res.status(400).json({ error: "Message is required" });
     }
 
-    // Directly hardcoded API Key and Endpoint
-    const BOT_API_KEY = 'AIzaSyCRPrNrOjLa_CThmgX4Fld_ji5Rn-g43ko';
-    const BOT_API_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+    // Load from .env
+    const BOT_API_KEY = process.env.BOT_API_KEY;
+    const BOT_API_ENDPOINT = process.env.BOT_API_ENDPOINT;
 
     try {
         const response = await axios.post(
