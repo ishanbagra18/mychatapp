@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://chitchat-4.onrender.com",
+    origin: "http://localhost:3001",
     methods: ["GET", "POST"],
   },
 });
