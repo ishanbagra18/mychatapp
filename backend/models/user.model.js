@@ -17,11 +17,7 @@ const userSchema = mongoose.Schema({
   confirmPassword: {
     type: String,
   },
-  profilePic: { // New field for profile picture
-    type: String,
-default: "https://tse4.mm.bing.net/th?id=OIP.yA6YvWaP4N4NfEvaDmmVjwHaEm&pid=Api&P=0&h=180", 
-  },
 }, { timestamps: true }); // createdAt & updatedAt
 
-const User = mongoose.model("User ", userSchema);
+const User = mongoose.model("User", userSchema);
 export default User;
