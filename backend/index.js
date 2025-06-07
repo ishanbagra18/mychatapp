@@ -11,6 +11,31 @@ import path from 'path';
 
 dotenv.config();
 
+
+
+const allowedOrigins = [
+  "https://mychatapp-o5n2.vercel.app/login",  // ✅ Replace with your deployed Vercel frontend URL
+  "http://localhost:3001"                // ✅ Optional: for local development
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true  // ✅ Needed if you're using cookies/session
+}));
+
+
+
+
+
+
+
+
 // middleware
 app.use(express.json());
 app.use(cookieParser());
